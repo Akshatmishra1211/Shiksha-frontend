@@ -1,0 +1,26 @@
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 230px;
+
+  .box {
+    width: 120px;
+    margin-left: 20px;
+    background-color: #8a4baf;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 5px;
+    color: white;
+
+    p {
+      color:white;
+    }
+
+    &:hover {
+      background-color: #532470;
+    }
+  }
+}

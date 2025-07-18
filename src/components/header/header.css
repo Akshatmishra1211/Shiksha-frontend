@@ -1,0 +1,86 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--header-bg);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: background-color 0.3s ease;
+
+  .logo {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--accent-color);
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  .link {
+    display: flex;
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      gap: 0.5rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--text-primary);
+      transition: 0.3s;
+
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    @media (max-width: 768px) {
+      gap: 0.5rem;
+    }
+  }
+}
+
+/* Light mode variables */
+:root {
+  --header-bg: #ffffff;
+  --header-text: #333333;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #333;
+  --text-secondary: #666666;
+  --border-color: #e0e0e0;
+  --card-bg: #ffffff;
+  --button-bg: #1DB954;
+  --button-hover: #1ed760;
+  --accent-color: #7715af;
+}
+
+/* Dark mode variables - Spotify inspired */
+.dark {
+  --header-bg: #353333;
+  --header-text: #ffffff;
+  --bg-primary: #121212;
+  --bg-secondary: #191414;
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --border-color: #2a2a2a;
+  --card-bg: #181818;
+  --button-bg: #1DB954;
+  --button-hover: #1ed760;
+  --accent-color: #1DB954;
+}
+
+/* Apply theme to body */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

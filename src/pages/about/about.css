@@ -1,0 +1,47 @@
+.about {
+  padding: 30px 0;
+  text-align: center;
+  min-height: 55vh;      /* 55% of browser height */
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-content h2 {
+  font-size: 32px;
+  color: #8a4baf;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 16px;
+  color:var(--text-primary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* New styles for better bullet alignment and aesthetics */
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.about-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1.05rem;
+  margin: 10px 0;
+  gap: 10px;
+  padding-left: 10px;
+  border-left: 3px solid #8a4baf;
+  background-color: #f7f0ff;
+  color:rgb(29, 29, 29);
+  border-radius: 5px;
+  padding: 10px;
+  justify-content: start;
+  text-align: left;
+}

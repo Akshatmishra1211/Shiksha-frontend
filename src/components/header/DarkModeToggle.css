@@ -1,0 +1,38 @@
+.dark-mode-toggle {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--toggle-bg);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dark-mode-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(29, 185, 84, 0.3);
+  }
+  
+  .toggle-slider {
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Light mode styles */
+  :root {
+    --toggle-bg: #e0e0e0;
+  }
+  
+  /* Dark mode styles */
+  .dark .dark-mode-toggle {
+    --toggle-bg: #1DB954;
+  }
+  
+  .dark .dark-mode-toggle:hover {
+    box-shadow: 0 0 15px rgba(29, 185, 84, 0.5);
+  }
