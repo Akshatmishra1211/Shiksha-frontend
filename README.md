@@ -1,8 +1,69 @@
-# React + Vite
+# 📚 SHIKSHA - E-Learning Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SHIKSHA is a modern, full-featured **e-learning web application** built with the **MERN stack**. It offers users a smooth course-learning experience with secure OTP-based login, progress tracking, and integrated Razorpay payments. Admins have full control over course and lecture management, user roles, and more.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend:** HTML, CSS, JavaScript, React
+- **Backend:** Node.js, Express
+- **Database:** MongoDB
+- **Authentication:** OTP-based Login
+- **Payments:** Razorpay Integration
+- **Deployment:** 
+  - **Frontend:** Vercel
+  - **Backend:** Render
+
+## 🔧 Features
+
+### 👨‍🎓 User Features
+- OTP-based secure login
+- View available courses and lectures
+- Progress bar showing **watched / total** lectures
+- ✅ Tick marks for already viewed lectures
+- Razorpay payment integration for course access
+- Light/Dark mode toggle
+
+### 🛠️ Admin Features
+- Add, delete, or update courses
+- Add or delete lectures with video preview
+- Role management:
+  - Promote any user to **admin**
+  - **Super admin protection** – new admins cannot demote or change super admin roles
+- View all registered users and manage them
+
+## 💻 How to Run the Project Locally
+
+### 🔃 Prerequisites
+- Node.js and npm installed
+- MongoDB (local or MongoDB Atlas)
+- Git installed
+
+### 🧩 Steps to Run
+
+```bash
+# 1. Clone the repositories
+git clone https://github.com/your-username/Shiksha-frontend.git
+git clone https://github.com/your-username/Shiksha-backend.git
+
+# 2. Install frontend dependencies
+cd Shiksha-frontend
+npm install
+
+# 3. Install backend dependencies
+cd ../Shiksha-backend
+npm install
+
+# 4. Make a .env file 
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+RAZORPAY_API_KEY=your_razorpay_key
+RAZORPAY_API_SECRET=your_razorpay_secret
+
+# Start backend server
+cd Shiksha-backend
+npm run dev
+
+# Start frontend server (in a new terminal)
+cd Shiksha-frontend
+npm run dev
