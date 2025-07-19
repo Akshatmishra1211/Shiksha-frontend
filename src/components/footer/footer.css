@@ -1,37 +1,113 @@
 footer {
   background-color: #8a5baf;
-  color: var(--text-primary);
-  padding: 20px 0;
-  text-align: center;
-  bottom: 0;
-
+  color: #fdfdfd;
+  padding: 25px 0 20px;
+  
   .footer-content {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 10px;
 
-    p {
-      margin: 0;
-      font-size: 14px;
-      color: white;
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 60px;
+      margin-bottom: 5px;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .footer-brand {
+        flex: 1;
+        max-width: 300px;
+
+        .logo {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-bottom: 20px;
+
+          .logo-icon {
+            color: rgb(12, 12, 12);
+          }
+
+          .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #131313;
+          }
+        }
+
+        .brand-description {
+          font-size: 15px;
+          line-height: 1.6;
+          color: #fcfafa;
+          margin: 0;
+        }
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 80px;
+        flex: 2;
+        padding-left: 50px;
+
+        @media (max-width: 768px) {
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .link-column {
+          h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #131313;
+            margin-bottom: 20px;
+            margin-top: 0;
+          }
+
+          ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+              margin-bottom: 12px;
+
+              a {
+                color: #e2dfdf;
+                text-decoration: none;
+                font-size: 14px;
+                transition: color 0.3s ease;
+
+                &:hover {
+                  color: #3f3e3f;
+                }
+              }
+            }
+          }
+        }
+      }
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    .footer-bottom {
+      .footer-divider {
+        border: none;
+        height: 1px;
+        background-color: #e2dfdf;
+        margin: 0 0 20px 0;
+      }
 
-    .social-links {
-      margin-top: 10px;
+      .copyright {
+        text-align: center;
+        font-size: 14px;
+        color: #f8f6f6;
+        margin: 0;
 
-      a {
-        color: white;
-        font-size: 18px;
-        margin: 0 10px;
-        text-decoration: none;
-        transition: color 0.3s ease;
-
-        &:hover {
-          color: #f5f5f5;
+        a {
+          color: #f8f6f6;
         }
       }
     }
