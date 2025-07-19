@@ -176,7 +176,7 @@ const Lecture = ({ user }) => {
         <>
           <div className="progress">
           Lecture completed - {completedLec} out of {lectLength} <br />
-          <progress value={completed} max={100}></progress> {completed} %    {/* progress is a tag in html to show progress bar which shows value in the variable "completed" */}
+          <progress value={completed} max={100}></progress> {Math.floor(completed)} %   {/* progress is a tag in html to show progress bar which shows value in the variable "completed" */}
           </div>
           <div className="lecture-page">
             <div className="left">
