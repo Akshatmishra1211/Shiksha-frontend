@@ -32,6 +32,10 @@ const Account = ({ user }) => {
               <strong>Email - {user.email}</strong>
             </p>
 
+            <p>
+              <strong>Email - {user.role === "admin" ? "Admin" : "Student"}</strong>
+            </p>
+
             {user.role === "user" && (
             <button
               onClick={() => navigate(`/${user._id}/dashboard`)}
