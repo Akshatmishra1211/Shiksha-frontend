@@ -23,12 +23,13 @@
 
       h2 {
         font-size: 24px;
-        color: #333;
+        color: var(--text-primary);
+        padding-left: 20px;
       }
 
       p {
         font-size: 14px;
-        color: #666;
+        color: var(--text-primary);
         margin: 5px 0;
       }
     }
@@ -40,5 +41,9 @@
       max-width: 800px;
       margin: 0 auto;
     }
+  }
+
+  p {
+    padding: 0 20px;
   }
 }
