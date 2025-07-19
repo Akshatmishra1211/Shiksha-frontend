@@ -2,19 +2,23 @@ import React, { useState, useMemo } from "react";
 import "./courses.css";
 import { CourseData } from "../../context/CourseContext";
 import CourseCard from "../../components/coursecard/CourseCard";
+import { IoCloseOutline } from "react-icons/io5"; // Imported Icons
+import { FiSearch } from "react-icons/fi";
+import { MdOutlineManageSearch } from "react-icons/md";
+
 
 const Courses = () => {
   const { courses } = CourseData();
   const [searchTerm, setSearchTerm] = useState("");
 
   // Filter courses based on search term
-  const filteredCourses = useMemo(() => {
-    if (!searchTerm.trim()) {
+  const filteredCourses = useMemo(() => {       // useMemo is a React Hook that caches the result of an expensive calculation — like filtering or sorting — and recomputes only when dependencies change.
+    if (!searchTerm.trim()) {                   // if search bar is empty return all courses
       return courses;
     }
-    
+
     return courses?.filter(course =>
-      course.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      course.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||         // Converts the searchTerm and title,description etc to lowercase too .includes(...) checks if the search term is present in the title
       course.description?.toLowerCase().includes(searchTerm.toLowerCase()) ||
       course.category?.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -28,21 +32,16 @@ const Courses = () => {
     setSearchTerm("");
   };
 
-  console.log(courses);
-
   return (
     <div className="courses">
       <div className="courses-header">
         <h2>Available Courses</h2>
-        
+
         {/* Stylish Search Bar */}
         <div className="search-container">
           <div className="search-wrapper">
             <div className="search-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="11" cy="11" r="8" stroke="currentColor" strokeWidth="2"/>
-                <path d="m21 21-4.35-4.35" stroke="currentColor" strokeWidth="2"/>
-              </svg>
+              <FiSearch size={20} />
             </div>
             <input
               type="text"
@@ -53,16 +52,14 @@ const Courses = () => {
             />
             {searchTerm && (
               <button className="clear-search" onClick={clearSearch}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" strokeWidth="2"/>
-                  <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" strokeWidth="2"/>
-                </svg>
+                <IoCloseOutline size={16} />
               </button>
             )}
           </div>
           {searchTerm && (
             <div className="search-results-info">
-              {filteredCourses?.length || 0} course{filteredCourses?.length !== 1 ? 's' : ''} found
+              {filteredCourses?.length || 0} course
+              {filteredCourses?.length !== 1 ? 's' : ''} found
             </div>
           )}
         </div>
@@ -74,11 +71,7 @@ const Courses = () => {
         ) : searchTerm ? (
           <div className="no-results">
             <div className="no-results-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="11" cy="11" r="8" stroke="currentColor" strokeWidth="2"/>
-                <path d="m21 21-4.35-4.35" stroke="currentColor" strokeWidth="2"/>
-                <line x1="8" y1="11" x2="14" y2="11" stroke="currentColor" strokeWidth="2"/>
-              </svg>
+              <MdOutlineManageSearch size={55} />
             </div>
             <h3>No courses found</h3>
             <p>Try adjusting your search terms or browse all available courses.</p>
