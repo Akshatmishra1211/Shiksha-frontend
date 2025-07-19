@@ -23,10 +23,10 @@ const CourseStudy = ({ user }) => {
           <img src={`${server}/${course.image}`} alt="" width={350} />
           <h1>{course.title}</h1>
           <h4>{course.description}</h4>
-          <h5>by - {course.createdBy} Sir</h5>
+          <h5>Instructor - {course.createdBy} Sir</h5>
           <h5>Duration - {course.duration} weeks</h5>
           <Link to={`/lectures/${course._id}`}>
-            <h2>Lectures</h2>
+            <h2>Lectures →</h2>
           </Link>
         </div>
       )}
