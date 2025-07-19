@@ -193,3 +193,27 @@ footer {
   color: var(--text-primary);
   border-top: 1px solid var(--border-color);
 }
+
+/* This applies to ALL pages automatically */
+.page, 
+[class*="page"], 
+main, 
+.container, 
+.content,
+#root > *,
+[data-page],
+.app-content,
+.route-container {
+  animation: pageEnter 0.5s ease-out forwards;
+}
+
+@keyframes pageEnter {    /* animation */
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
