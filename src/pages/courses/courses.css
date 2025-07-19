@@ -1,18 +1,147 @@
 .courses {
-  padding: 70px 0;
+  padding: 40px 0;
   text-align: center;
   min-height: 60vh;
+}
 
-  h2 {
-    font-size: 32px;
-    color: #8a4baf;
-    margin-bottom: 30px;
+.courses h2 {
+  font-size: 32px;
+  color: #8a4baf;
+  margin-bottom: 30px;
+}
+
+/* Search Bar */
+.search-container {
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  padding: 0 20px;
+}
+
+.search-wrapper {
+  position: relative;
+  background: white !important; 
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+}
+
+.search-wrapper:focus-within {
+  border-color: #8a4baf;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8a4baf;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 50px 14px 45px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  font-size: 16px;
+}
+
+.search-input::placeholder {
+  color: #94a3b8;
+}
+
+.clear-search {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #f1f5f9;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  color: #64748b;
+}
+
+.clear-search:hover {
+  background: #e2e8f0;
+}
+
+.search-results-info {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* Course Container */
+.course-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* No Results */
+.no-results, .no-courses {
+  width: 100%;
+  text-align: center;
+  padding: 40px 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin: 20px auto;
+  max-width: 400px;
+  color: #333;
+}
+
+.no-results h3, .no-courses h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.no-results p, .no-courses p {
+  color: #666;
+}
+
+.no-results-icon {
+  margin-bottom: 15px;
+  color: #94a3b8;
+}
+
+.clear-search-btn {
+  background: #8a4baf;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.clear-search-btn:hover {
+  background: #764ba2;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .search-container {
+    max-width: 90%;
+    padding: 0 10px;
   }
-
+  
+  .search-input {
+    padding: 12px 45px 12px 40px;
+    font-size: 14px;
+  }
+  
   .course-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    gap: 20px;
+  }
+  
+  .courses h2 {
+    margin-bottom: 5px;
   }
 }
