@@ -1,4 +1,4 @@
-# 📚 SHIKSHA - E-Learning Platform
+# 📚 SHIKSHA - E-Learning Platform (Frontend)
 
 SHIKSHA is a modern, full-featured **e-learning web application** built with the **MERN stack**. It offers users a smooth course-learning experience with secure OTP-based login, progress tracking, and integrated Razorpay payments. Admins have full control over course and lecture management, user roles, and more.
 
