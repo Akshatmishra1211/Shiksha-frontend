@@ -2,6 +2,13 @@
 
 SHIKSHA is a modern, full-featured **e-learning web application** built with the **MERN stack**. It offers users a smooth course-learning experience with secure OTP-based login, progress tracking, and integrated Razorpay payments. Admins have full control over course and lecture management, user roles, and more.
 
+## 🌐 Deployed Version
+
+You can access the live deployed versions of SHIKSHA below:
+
+| 🚀 Frontend (Vercel) | https://shiksha-frontend-ochre.vercel.app/login |
+| 🖥️ Backend (Render API) | 
+
 ## 🚀 Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript, React
