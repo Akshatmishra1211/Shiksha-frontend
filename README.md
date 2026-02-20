@@ -4,10 +4,11 @@ SHIKSHA is a modern, full-featured **e-learning web application** built with the
 
 ## 🌐 Deployed Version
 
-You can access the live deployed versions of SHIKSHA below:
+🚀 **Frontend (Vercel):**  
+https://shiksha-frontend-ochre.vercel.app/login
 
-| 🚀 Frontend (Vercel) | https://shiksha-frontend-ochre.vercel.app/login |
-| 🖥️ Backend (Render API) | 
+🖥️ **Backend (Render API):**  
+https://shiksha-backend-h51x.onrender.com/
 
 ## 🚀 Tech Stack
 
